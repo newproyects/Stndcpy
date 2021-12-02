@@ -6,6 +6,7 @@ import { AppRoutingModule } from './app-routing.module';
 //Firebase-Modules
 import { AngularFireModule } from '@angular/fire';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
+import { AngularFireStorageModule } from '@angular/fire/storage';
 
 import { environment } from '../environments/environment';
 
@@ -78,6 +79,7 @@ import { ContactusComponent } from './components/pages/contactus/contactus.compo
 	BrowserModule,
 	AppRoutingModule,
 	AngularFirestoreModule,
+	AngularFireStorageModule,
 	AngularFireModule.initializeApp(environment.firebase)
     ],
     providers: [],

@@ -1,5 +1,14 @@
 {
   "projects": {
     "default": "standers-tech"
+  },
+  "targets": {
+    "standersp-5aa6a": {
+      "hosting": {
+        "finsa": [
+          "standersp-5aa6a"
+        ]
+      }
+    }
   }
 }

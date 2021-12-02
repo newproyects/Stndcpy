@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router, NavigationStart, NavigationCancel, NavigationEnd } from '@angular/router';
 import { Location, LocationStrategy, PathLocationStrategy } from '@angular/common';
 import { AngularFirestore } from '@angular/fire/firestore';
+import { Observable } from 'rxjs';
 import { filter } from 'rxjs/operators';
 declare let $: any;
 
@@ -47,5 +48,3 @@ export class AppComponent implements OnInit {
       });
   }
 }
-
-

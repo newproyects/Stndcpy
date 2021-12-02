@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router, NavigationStart, NavigationCancel, NavigationEnd } from '@angular/router';
 import { Location, LocationStrategy, PathLocationStrategy } from '@angular/common';
 import { AngularFirestore } from '@angular/fire/firestore';
+import { AngularFireStorage } from '@angular/fire/storage';
 import { Observable } from 'rxjs';
 import { filter } from 'rxjs/operators';
 declare let $: any;
@@ -21,7 +22,7 @@ export class AppComponent implements OnInit {
   location: any;
   routerSubscription: any;
 
-    constructor(private router: Router, firestore: AngularFirestore) {
+    constructor(private router: Router, firestore: AngularFirestore, storage: AngularFireStorage) {
   }
 
   ngOnInit(){

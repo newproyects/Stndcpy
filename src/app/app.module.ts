@@ -1,7 +1,14 @@
+//Modules
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
 import { AppRoutingModule } from './app-routing.module';
+
+//Firebase-Modules
+import { AngularFireModule } from '@angular/fire';
+
+import { environment } from '../environments/environment';
+
+//Components
 import { AppComponent } from './app.component';
 import { PreloaderComponent } from './components/layouts/preloader/preloader.component';
 import { Header1Component } from './components/layouts/header1/header1.component';
@@ -34,43 +41,44 @@ import { ShopDetailComponent } from './components/pages/shop-detail/shop-detail.
 import { ContactusComponent } from './components/pages/contactus/contactus.component';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    PreloaderComponent,
-    Header1Component,
-    Header2Component,
-    Header3Component,
-    ShopSidebarComponent,
-    BlogSidebarComponent,
-    ServiceSidebarComponent,
-    Footer1Component,
-    Footer2Component,
-    Homepage1Component,
-    Homepage2Component,
-    Homepage3Component,
-    AboutusComponent,
-    TeamComponent,
-    TeamDetailsComponent,
-    CareerComponent,
-    FaqComponent,
-    Service1Component,
-    Service2Component,
-    ServiceDetailComponent,
-    BlogStandardComponent,
-    BlogGridComponent,
-    BlogDetailComponent,
-    Portfolio1Component,
-    Portfolio2Component,
-    PortfolioDetailComponent,
-    ShopComponent,
-    ShopDetailComponent,
-    ContactusComponent
-  ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule
-  ],
-  providers: [],
-  bootstrap: [AppComponent]
+    declarations: [
+	AppComponent,
+	PreloaderComponent,
+	Header1Component,
+	Header2Component,
+	Header3Component,
+	ShopSidebarComponent,
+	BlogSidebarComponent,
+	ServiceSidebarComponent,
+	Footer1Component,
+	Footer2Component,
+	Homepage1Component,
+	Homepage2Component,
+	Homepage3Component,
+	AboutusComponent,
+	TeamComponent,
+	TeamDetailsComponent,
+	CareerComponent,
+	FaqComponent,
+	Service1Component,
+	Service2Component,
+	ServiceDetailComponent,
+	BlogStandardComponent,
+	BlogGridComponent,
+	BlogDetailComponent,
+	Portfolio1Component,
+	Portfolio2Component,
+	PortfolioDetailComponent,
+	ShopComponent,
+	ShopDetailComponent,
+	ContactusComponent
+    ],
+    imports: [
+	BrowserModule,
+	AppRoutingModule,
+	AngularFireModule.initializeApp(environment.firebase)
+    ],
+    providers: [],
+    bootstrap: [AppComponent]
 })
 export class AppModule { }

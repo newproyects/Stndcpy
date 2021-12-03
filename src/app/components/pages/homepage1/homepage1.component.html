@@ -7,9 +7,14 @@
 					<div class="row">
 						<div class="col-lg-10">
 							<div class="banner-content">
-								<span class="promo-text" data-animation="fadeInDown" data-delay="0.8s">
-									Recupera tu libertad
+								<span class="promo-text" data-animation="fadeInDown" data-delay="0.8s" class="text">
+								  Recupera tu libertad
 								</span>
+								<ul>
+								  <li class="text" *ngFor="let titulo of titulos | async">
+								    {{titulo.titulo}}
+								  </li>
+								</ul>
 								<h1 data-animation="fadeInUp" data-delay="1s">
 									Bipidestador Robótico tecnologico <br> global
 								</h1>
